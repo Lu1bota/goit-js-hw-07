@@ -18,10 +18,9 @@ categoriesListItem.forEach((item) => {
   }
 });
 
-let totalItem = 0;
+console.log(`Number of categories: ${item.length}`);
 
-item.forEach(() => {
-  totalItem++;
+item.forEach((event) => {
+  console.log(`Categories: ${event.querySelector("h2").textContent}`);
+  console.log(`Elements: ${event.querySelectorAll("li").length}`);
 });
-
-console.log(`Number of categories: ${totalItem}`);
