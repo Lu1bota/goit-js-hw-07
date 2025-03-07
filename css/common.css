@@ -204,10 +204,11 @@ h1,h2,h3,h4,h5,h6,p {
 
 .container-input {
   border: 1px solid #808080;
-    border-radius: 8px;
-    width: 150px;
-    height: 40px;
-    margin-right: 16px;
+  border-radius: 8px;
+  width: 150px;
+  height: 40px;
+  margin-right: 16px;
+  text-align: center;
 }
 
 .button-create {
@@ -267,6 +268,14 @@ h1,h2,h3,h4,h5,h6,p {
   display: flex;
   flex-wrap: wrap;
   gap: 44px;
+
+  min-width: 486px;
+  min-height: 134px;
+  background-color: #f6f6fe;
+  padding: 32px;
+  padding-right: 28px;
+  margin-top: 16px;
+  border-radius: 8px;
 }
 
 /* #endregion Style task-6 */
