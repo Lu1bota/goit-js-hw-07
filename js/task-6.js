@@ -12,6 +12,8 @@ const container = document.querySelector("#boxes");
 btnCreate.addEventListener("click", handleClickCreate);
 btnDestroy.addEventListener("click", destroyBoxes);
 
+const fragment = document.createDocumentFragment();
+
 function handleClickCreate() {
   const amount = input.value;
   if (amount < 1 || amount > 100) {
@@ -27,12 +29,13 @@ function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
     const containerBox = document.createElement("div");
     containerBox.classList.add("container-box");
-    const size = 30 + (i - 1) * 10;
+    const size = 30 + i * 10;
     containerBox.style.width = `${size}px`;
     containerBox.style.height = `${size}px`;
     containerBox.style.backgroundColor = getRandomHexColor();
-    container.append(containerBox);
+    fragment.append(containerBox);
   }
+  container.append(fragment);
 }
 
 function destroyBoxes() {
